@@ -9,6 +9,7 @@ project("xenia-app")
   language("C++")
   links({
     "capstone",
+    "dxbc",
     "gflags",
     "glew",
     "glslang-spirv",
@@ -73,8 +74,10 @@ project("xenia-app")
   filter("platforms:Windows")
     links({
       "xenia-apu-xaudio2",
+      "xenia-gpu-d3d12",
       "xenia-hid-winkey",
       "xenia-hid-xinput",
+      "xenia-ui-d3d12",
     })
 
   filter("platforms:Windows")
